@@ -17,7 +17,7 @@ public class PlayerDao {
     public List<Player>getPlayers() {
         String sql = "select nome,nick,jogo,contato from tb_player";
 
-        return db.query(sql,(res,rowNum)-> {
+        return db.query(sql, (res, rowNum)-> {
             return new Player(
                 res.getString("nome"),
                 res.getString("nick"),
