@@ -15,7 +15,7 @@ public class PlayerDao {
     JdbcTemplate dbPlayers;
 
     public List<Player>getPlayers() {
-        String sql = "select nome,nick,jogo,contato from tb_player";
+        String sql = "select nome,nick,jogo,contato from tb_players";
 
         return dbPlayers.query(sql, (res, rowNum)-> {
             return new Player(
