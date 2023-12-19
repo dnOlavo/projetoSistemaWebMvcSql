@@ -12,12 +12,12 @@ import br.edu.iftm.tspi.projetocrud.domain.Player;
 public class PlayerDao {
     
     @Autowired
-    JdbcTemplate db;
+    JdbcTemplate dbPlayers;
 
     public List<Player>getPlayers() {
         String sql = "select nome,nick,jogo,contato from tb_player";
 
-        return db.query(sql, (res, rowNum)-> {
+        return dbPlayers.query(sql, (res, rowNum)-> {
             return new Player(
                 res.getString("nome"),
                 res.getString("nick"),

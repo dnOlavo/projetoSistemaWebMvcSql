@@ -16,6 +16,6 @@ public class PlayerController {
     @RequestMapping("players")
     public String getPlayers(Model model) {
         model.addAttribute("players", dao.getPlayers());
-        return "playersList";
+        return "lista";
     }
 }
